@@ -107,7 +107,7 @@ fi
 if [ -f $FUNC_TEST_SCRIPT ]; then
   source $FUNC_TEST_SCRIPT
 else
-    pytest -v -r sx --color=yes --pyargs pulp_rpm.tests.functional
+    pytest -v -r sx --color=yes --pyargs pulp_rpm.tests.functional.api.ConsumeSignedRepomdTestCase
 fi
 export PULP_FIXTURES_URL="http://pulp-fixtures:8080"
 pushd ../pulp-cli
